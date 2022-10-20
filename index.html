@@ -1,27 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Student ID Registration System</title>
-</head>
-
-<style>
-    body {
-  background: linear-gradient(45deg, #FC466B, #3F5EFB);
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-form {
-  background: rgba(255, 255, 255, 0.3);
-  padding: 10em;
-  height: 320px;
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Helvetica,Calibri,  sans-serif;  
+  
+  background-image: url('https://www.uc-bcf.edu.ph/assets/images/slides/slide-celebrate-75-years-icon.jpg');  
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover
+} 
+.form {
+  background: #FFFDD0;
+  padding: 5em;
+  height: 5px;
   
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -32,189 +25,133 @@ form {
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
- 
-
-justify-content: center;
+  justify-content: center;
+  font color: black;
 }
-form p {
-  font-weight: 500;
-  color: #000000;
+ 
+.topbox{
+      font-weight: 500;
+  color:brown;
   opacity: 0.7;
+  border-radius: 20px;
   font-size: 1.4rem;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-form a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 12px;
-}
-form a:hover {
-  text-shadow: 2px 2px 6px #00000040;
-}
-form a:active {
-  text-shadow: none;
-}
-form input {
-  background: transparent;
-  width: 200px;
-  padding: 1em;
-  margin-bottom: 2em;
-  border: none;
+  background-color:#FFC0CB;
+  border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5000px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-form input:hover {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-form input[type=email]:focus, form input[type=password]:focus {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-form input[type=button] {
-  margin-top: 10px;
-  width: 150px;
-  font-size: 1rem;
-}
-form input[type=button]:hover {
-  cursor: pointer;
-}
-form input[type=button]:active {
-  background: rgba(255, 255, 255, 0.2);
-}
-form:hover {
-  margin: 4px;
-}
-
-::-moz-placeholder {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  color: #000000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-:-ms-input-placeholder {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  color: #000000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-::placeholder {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  color: #000000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.drop {
-  background: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-radius: 10px;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+}
+.container {  
+    margin-top: 1px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 70px;  
+    opacity: .9;
+        border-radius: 20px;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color:#FFC0CB;
+  border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  transition: all 0.2s ease;
-}
-select {
-  background: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
-  position: center;
-  transition: all 0.2s ease;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-.drop-1 {
-  height: 80px;
-  width: 80px;
-  top: -20px;
-  left: -40px;
-  z-index: -1;
-}
-.drop-2 {
-  height: 80px;
-  width: 80px;
-  bottom: -30px;
-  right: -10px;
-}
-.drop-3 {
-  height: 100px;
-  width: 100px;
-  bottom: 120px;
-  right: -50px;
-  z-index: -1;
-}
-.drop-4 {
-  height: 120px;
-  width: 120px;
-  top: -60px;
-  right: -60px;
-}
-.drop-5 {
-  height: 60px;
-  width: 60px;
-  bottom: 170px;
-  left: 90px;
-  z-index: -1;
-}
-
-a,
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
-
-</style>
-
-<body>
-
-<form action="action_page.php">
-	<h3>Student ID Registration</h3>
-	<label for="username">First Name</label>
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);  
+}  
   
-  <input type="text" id="Firstname" name="Firstname"placeholder="Your name" maxlength="11"><br>
-  <label for="username">Last Name</label>
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 12px;  
+  margin: 10px 0 10px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+.registerbtn {  
+  background-color: #007a93;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 2;  
+}  
+</style>  
+</head>  
+<body>  
+<form action="action_page1.php">
+<div class="form"> 
+    <center><h1 style="color:black;"> UNIVERSITY OF THE CORDILLERAS </h1></center>
+</div>   
+<div class="topbox">  
+    <center>  <h2 style="color: black;"> UC STUDENT ID REGISTRATION</h2> </center>  
+</div>  
+  <div class="container">  
+    <label> ID Number: </label>
+        <input type="text" name="ID number" maxlength="11" placeholder="19-1234-234" />
+	<label> Firstname </label>   
+		<input type="text" name="firstname" placeholder= "First Name" size="20" required />   
+	<label> Middlename: </label>   
+		<input type="text" name="middlename" placeholder="Middle Name" size="20" required />   
+	<label> Lastname: </label>    
+		<input type="text" name="lastname" placeholder="Last Name" size="15"required />   
+	<label for="email">Email</label>  
+		<input type="text" placeholder="aadsa***@gmail.com" name="email" required>  
+	<label>   
+	Phone :  
+	</label>  
+		<input type="text" name="phone no." placeholder="09166661341"  hint="+639" size="14"/>   	
+<div>
+	Address :  
+	<textarea cols="80" rows="5" placeholder="Balili, La Trinidad, Benguet" value="address" required></textarea>    
+	<label>   
+	Gender :  
+	</label><br>  
+	<input type="radio" value="Male" name="gender" checked > Male<br>   
+	<input type="radio" value="Female" name="gender"> Female  <br> 
+  <input type="radio" value="Female" name="gender"> Prefer Not to Say   
+</div>  
+
+<div>
+	<label>   
+	Course :  
+	</label>   
+	<select>  
+	<option value="Course">Course</option>  
+	<option value="BSIT">BSIT</option>  
+	<option value="BSCS">BSCS</option>  
+	<option value="BSDA">BSDA</option>
+  <option value="BSDA">BSED</option> 
+  <option value="BSDA">BSCJE</option>   
+	</select>  
+</div>  
+<div>  
+    <label for="psw">Password</label>  
+        <input type="password" placeholder="*********" name="psw" size="8" required> 
   
-  <input type="text" id="Lastname" name="Lastname"placeholder="Your last name" maxlength="11"><br>
- 
-  <label for="cars">Courses</label>
-  <select id="Course" name="Courses">
-    <option value="phil">BSIT</option>
-    <option value="Am">BSCS</option>
-    <option value="Chi">BSDA</option>
-    <option value="Russ">BSED</option>
-  </select><br>
-  
- 
- 
- <label for="freeform">Address</label>
+    <label for="psw-repeat">Confirm Password</label>  
+		<input type="password" placeholder="*********" name="psw-repeat" required> 
 
-
-<textarea id="freeform" name="freeform" rows="4" cols="50">
-write here...
-</textarea><br>
-   <input type="submit" value="Register"><br>
-</form>
-
-</body>
+    <button type="submit" class="registerbtn">Register</button>   
+</form>  
+</body>  
 </html>
